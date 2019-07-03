@@ -1,0 +1,215 @@
+\hypertarget{classMPU6050}{}\section{M\+P\+U6050 Class Reference}
+\label{classMPU6050}\index{M\+P\+U6050@{M\+P\+U6050}}
+
+
+\hyperlink{classMPU6050}{M\+P\+U6050} Accelerometer interface.  
+
+
+
+
+{\ttfamily \#include $<$M\+P\+U6050.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classMPU6050_a7a445f8f9ae82bc06a6ab791d17f2cb3}{M\+P\+U6050} (hwlib\+::i2c\+\_\+bus\+\_\+bit\+\_\+banged\+\_\+scl\+\_\+sda \&i2c\+\_\+bus, const uint8\+\_\+t address)
+\begin{DoxyCompactList}\small\item\em Constructor \hyperlink{classMPU6050}{M\+P\+U6050} module. \end{DoxyCompactList}\item 
+void \hyperlink{classMPU6050_ad980ebc85c0e817561d1fcf5eaa9deaf}{enable\+\_\+sleep} ()
+\begin{DoxyCompactList}\small\item\em Sleep. \end{DoxyCompactList}\item 
+void \hyperlink{classMPU6050_a65c24f3e10f6833cda834d6c892a7e97}{disable\+\_\+sleep} ()
+\begin{DoxyCompactList}\small\item\em Wake up. \end{DoxyCompactList}\item 
+void \hyperlink{classMPU6050_a6b8c79ef52fecb044d2b45632ec8ae5b}{update\+Accel} ()
+\begin{DoxyCompactList}\small\item\em Updates. \end{DoxyCompactList}\item 
+void \hyperlink{classMPU6050_a306d02443c09814b573bd8597d1670c0}{update\+Gyro} ()
+\begin{DoxyCompactList}\small\item\em Updates. \end{DoxyCompactList}\item 
+uint16\+\_\+t \hyperlink{classMPU6050_a6d5b7dafd96fc69ef489bb00d0964e2d}{compress} (uint8\+\_\+t high, uint8\+\_\+t low)
+\begin{DoxyCompactList}\small\item\em Compresses. \end{DoxyCompactList}\item 
+void \hyperlink{classMPU6050_aa6a50aeb1ded7185e8730d95e451e87d}{print} (const int16\+\_\+t x, const int16\+\_\+t y, const int16\+\_\+t z)
+\begin{DoxyCompactList}\small\item\em Prints. \end{DoxyCompactList}\item 
+uint8\+\_\+t \hyperlink{classMPU6050_aa60b939c6eae3e68ea0a161fbcb4d3af}{read\+Register} (const uint8\+\_\+t register\+\_\+address)
+\begin{DoxyCompactList}\small\item\em Reads the registers. \end{DoxyCompactList}\item 
+int16\+\_\+t \hyperlink{classMPU6050_ad25208622b16528a729e674ca808222b}{get\+\_\+aX} ()
+\begin{DoxyCompactList}\small\item\em X getter accelerometer. \end{DoxyCompactList}\item 
+int16\+\_\+t \hyperlink{classMPU6050_aedccda658db98a9876415beec8a6537f}{get\+\_\+aY} ()
+\begin{DoxyCompactList}\small\item\em Y getter accelerometer. \end{DoxyCompactList}\item 
+int16\+\_\+t \hyperlink{classMPU6050_aee0faebb35251e349f1ab29d7bf4e39c}{get\+\_\+aZ} ()
+\begin{DoxyCompactList}\small\item\em Z getter accelerometer. \end{DoxyCompactList}\item 
+int16\+\_\+t \hyperlink{classMPU6050_ad781cdfd81abb9f0ff9b604b1f7b4bcc}{get\+\_\+tilt} (int16\+\_\+t v, int add)
+\begin{DoxyCompactList}\small\item\em Tilting. \end{DoxyCompactList}\item 
+int16\+\_\+t \hyperlink{classMPU6050_ac932e75f45e2a4f0511f00953d156e65}{get\+\_\+gX} ()
+\begin{DoxyCompactList}\small\item\em X getter gyrosensor. \end{DoxyCompactList}\item 
+int16\+\_\+t \hyperlink{classMPU6050_a3df5449f731caca323262c6dd8399909}{get\+\_\+gY} ()
+\begin{DoxyCompactList}\small\item\em Y getter gyrosensor. \end{DoxyCompactList}\item 
+int16\+\_\+t \hyperlink{classMPU6050_a0d408ead0e95bbb77427040d431cd30a}{get\+\_\+gZ} ()
+\begin{DoxyCompactList}\small\item\em Z getter gyrosensor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classMPU6050}{M\+P\+U6050} Accelerometer interface. 
+
+This is a class of a \hyperlink{classMPU6050}{M\+P\+U6050} Accelerometer and Gyrosensor with X, Y, Z values. For communicating with the I2C protocol, hwlib is used. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classMPU6050_a7a445f8f9ae82bc06a6ab791d17f2cb3}\label{classMPU6050_a7a445f8f9ae82bc06a6ab791d17f2cb3}} 
+\index{M\+P\+U6050@{M\+P\+U6050}!M\+P\+U6050@{M\+P\+U6050}}
+\index{M\+P\+U6050@{M\+P\+U6050}!M\+P\+U6050@{M\+P\+U6050}}
+\subsubsection{\texorpdfstring{M\+P\+U6050()}{MPU6050()}}
+{\footnotesize\ttfamily M\+P\+U6050\+::\+M\+P\+U6050 (\begin{DoxyParamCaption}\item[{hwlib\+::i2c\+\_\+bus\+\_\+bit\+\_\+banged\+\_\+scl\+\_\+sda \&}]{i2c\+\_\+bus,  }\item[{const uint8\+\_\+t}]{address }\end{DoxyParamCaption})}
+
+
+
+Constructor \hyperlink{classMPU6050}{M\+P\+U6050} module. 
+
+Can be used to get the raw values of the right address. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classMPU6050_a6d5b7dafd96fc69ef489bb00d0964e2d}\label{classMPU6050_a6d5b7dafd96fc69ef489bb00d0964e2d}} 
+\index{M\+P\+U6050@{M\+P\+U6050}!compress@{compress}}
+\index{compress@{compress}!M\+P\+U6050@{M\+P\+U6050}}
+\subsubsection{\texorpdfstring{compress()}{compress()}}
+{\footnotesize\ttfamily uint16\+\_\+t M\+P\+U6050\+::compress (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{high,  }\item[{uint8\+\_\+t}]{low }\end{DoxyParamCaption})}
+
+
+
+Compresses. 
+
+This function takes the high byte and low byte values and put it in one value. \mbox{\Hypertarget{classMPU6050_a65c24f3e10f6833cda834d6c892a7e97}\label{classMPU6050_a65c24f3e10f6833cda834d6c892a7e97}} 
+\index{M\+P\+U6050@{M\+P\+U6050}!disable\+\_\+sleep@{disable\+\_\+sleep}}
+\index{disable\+\_\+sleep@{disable\+\_\+sleep}!M\+P\+U6050@{M\+P\+U6050}}
+\subsubsection{\texorpdfstring{disable\+\_\+sleep()}{disable\_sleep()}}
+{\footnotesize\ttfamily void M\+P\+U6050\+::disable\+\_\+sleep (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Wake up. 
+
+These bytes are needed to write a 0 byte to the register to wake up after it has been turned off.
+
+This writes the bytes array which is used to wake up after it has been turned off. \mbox{\Hypertarget{classMPU6050_ad980ebc85c0e817561d1fcf5eaa9deaf}\label{classMPU6050_ad980ebc85c0e817561d1fcf5eaa9deaf}} 
+\index{M\+P\+U6050@{M\+P\+U6050}!enable\+\_\+sleep@{enable\+\_\+sleep}}
+\index{enable\+\_\+sleep@{enable\+\_\+sleep}!M\+P\+U6050@{M\+P\+U6050}}
+\subsubsection{\texorpdfstring{enable\+\_\+sleep()}{enable\_sleep()}}
+{\footnotesize\ttfamily void M\+P\+U6050\+::enable\+\_\+sleep (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Sleep. 
+
+These bytes are needed to write a 0 byte to the register to sleep after it has been turned off.
+
+This writes the bytes array which is used to sleep after it has been turned off. \mbox{\Hypertarget{classMPU6050_ad25208622b16528a729e674ca808222b}\label{classMPU6050_ad25208622b16528a729e674ca808222b}} 
+\index{M\+P\+U6050@{M\+P\+U6050}!get\+\_\+aX@{get\+\_\+aX}}
+\index{get\+\_\+aX@{get\+\_\+aX}!M\+P\+U6050@{M\+P\+U6050}}
+\subsubsection{\texorpdfstring{get\+\_\+a\+X()}{get\_aX()}}
+{\footnotesize\ttfamily int16\+\_\+t M\+P\+U6050\+::get\+\_\+aX (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+X getter accelerometer. 
+
+This function is a specific getter for the X value. \mbox{\Hypertarget{classMPU6050_aedccda658db98a9876415beec8a6537f}\label{classMPU6050_aedccda658db98a9876415beec8a6537f}} 
+\index{M\+P\+U6050@{M\+P\+U6050}!get\+\_\+aY@{get\+\_\+aY}}
+\index{get\+\_\+aY@{get\+\_\+aY}!M\+P\+U6050@{M\+P\+U6050}}
+\subsubsection{\texorpdfstring{get\+\_\+a\+Y()}{get\_aY()}}
+{\footnotesize\ttfamily int16\+\_\+t M\+P\+U6050\+::get\+\_\+aY (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Y getter accelerometer. 
+
+This function is a specific getter for the Y value. \mbox{\Hypertarget{classMPU6050_aee0faebb35251e349f1ab29d7bf4e39c}\label{classMPU6050_aee0faebb35251e349f1ab29d7bf4e39c}} 
+\index{M\+P\+U6050@{M\+P\+U6050}!get\+\_\+aZ@{get\+\_\+aZ}}
+\index{get\+\_\+aZ@{get\+\_\+aZ}!M\+P\+U6050@{M\+P\+U6050}}
+\subsubsection{\texorpdfstring{get\+\_\+a\+Z()}{get\_aZ()}}
+{\footnotesize\ttfamily int16\+\_\+t M\+P\+U6050\+::get\+\_\+aZ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Z getter accelerometer. 
+
+This function is a specific getter for the Z value. \mbox{\Hypertarget{classMPU6050_ac932e75f45e2a4f0511f00953d156e65}\label{classMPU6050_ac932e75f45e2a4f0511f00953d156e65}} 
+\index{M\+P\+U6050@{M\+P\+U6050}!get\+\_\+gX@{get\+\_\+gX}}
+\index{get\+\_\+gX@{get\+\_\+gX}!M\+P\+U6050@{M\+P\+U6050}}
+\subsubsection{\texorpdfstring{get\+\_\+g\+X()}{get\_gX()}}
+{\footnotesize\ttfamily int16\+\_\+t M\+P\+U6050\+::get\+\_\+gX (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+X getter gyrosensor. 
+
+This function is a specific getter for the X value. \mbox{\Hypertarget{classMPU6050_a3df5449f731caca323262c6dd8399909}\label{classMPU6050_a3df5449f731caca323262c6dd8399909}} 
+\index{M\+P\+U6050@{M\+P\+U6050}!get\+\_\+gY@{get\+\_\+gY}}
+\index{get\+\_\+gY@{get\+\_\+gY}!M\+P\+U6050@{M\+P\+U6050}}
+\subsubsection{\texorpdfstring{get\+\_\+g\+Y()}{get\_gY()}}
+{\footnotesize\ttfamily int16\+\_\+t M\+P\+U6050\+::get\+\_\+gY (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Y getter gyrosensor. 
+
+This function is a specific getter for the Y value. \mbox{\Hypertarget{classMPU6050_a0d408ead0e95bbb77427040d431cd30a}\label{classMPU6050_a0d408ead0e95bbb77427040d431cd30a}} 
+\index{M\+P\+U6050@{M\+P\+U6050}!get\+\_\+gZ@{get\+\_\+gZ}}
+\index{get\+\_\+gZ@{get\+\_\+gZ}!M\+P\+U6050@{M\+P\+U6050}}
+\subsubsection{\texorpdfstring{get\+\_\+g\+Z()}{get\_gZ()}}
+{\footnotesize\ttfamily int16\+\_\+t M\+P\+U6050\+::get\+\_\+gZ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Z getter gyrosensor. 
+
+This function is a specific getter for the Z value. \mbox{\Hypertarget{classMPU6050_ad781cdfd81abb9f0ff9b604b1f7b4bcc}\label{classMPU6050_ad781cdfd81abb9f0ff9b604b1f7b4bcc}} 
+\index{M\+P\+U6050@{M\+P\+U6050}!get\+\_\+tilt@{get\+\_\+tilt}}
+\index{get\+\_\+tilt@{get\+\_\+tilt}!M\+P\+U6050@{M\+P\+U6050}}
+\subsubsection{\texorpdfstring{get\+\_\+tilt()}{get\_tilt()}}
+{\footnotesize\ttfamily int16\+\_\+t M\+P\+U6050\+::get\+\_\+tilt (\begin{DoxyParamCaption}\item[{int16\+\_\+t}]{v,  }\item[{int}]{add }\end{DoxyParamCaption})}
+
+
+
+Tilting. 
+
+This function returns a value after a formula for calibrating tilt is applied . \mbox{\Hypertarget{classMPU6050_aa6a50aeb1ded7185e8730d95e451e87d}\label{classMPU6050_aa6a50aeb1ded7185e8730d95e451e87d}} 
+\index{M\+P\+U6050@{M\+P\+U6050}!print@{print}}
+\index{print@{print}!M\+P\+U6050@{M\+P\+U6050}}
+\subsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily void M\+P\+U6050\+::print (\begin{DoxyParamCaption}\item[{const int16\+\_\+t}]{x,  }\item[{const int16\+\_\+t}]{y,  }\item[{const int16\+\_\+t}]{z }\end{DoxyParamCaption})}
+
+
+
+Prints. 
+
+This function gives an overview of all the values by printing it. \mbox{\Hypertarget{classMPU6050_aa60b939c6eae3e68ea0a161fbcb4d3af}\label{classMPU6050_aa60b939c6eae3e68ea0a161fbcb4d3af}} 
+\index{M\+P\+U6050@{M\+P\+U6050}!read\+Register@{read\+Register}}
+\index{read\+Register@{read\+Register}!M\+P\+U6050@{M\+P\+U6050}}
+\subsubsection{\texorpdfstring{read\+Register()}{readRegister()}}
+{\footnotesize\ttfamily uint8\+\_\+t M\+P\+U6050\+::read\+Register (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t}]{register\+\_\+address }\end{DoxyParamCaption})}
+
+
+
+Reads the registers. 
+
+This function reads the registers and returns a byte by the given address. \mbox{\Hypertarget{classMPU6050_a6b8c79ef52fecb044d2b45632ec8ae5b}\label{classMPU6050_a6b8c79ef52fecb044d2b45632ec8ae5b}} 
+\index{M\+P\+U6050@{M\+P\+U6050}!update\+Accel@{update\+Accel}}
+\index{update\+Accel@{update\+Accel}!M\+P\+U6050@{M\+P\+U6050}}
+\subsubsection{\texorpdfstring{update\+Accel()}{updateAccel()}}
+{\footnotesize\ttfamily void M\+P\+U6050\+::update\+Accel (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Updates. 
+
+This function updates the values of the Accelerometer by reading the register his values. \mbox{\Hypertarget{classMPU6050_a306d02443c09814b573bd8597d1670c0}\label{classMPU6050_a306d02443c09814b573bd8597d1670c0}} 
+\index{M\+P\+U6050@{M\+P\+U6050}!update\+Gyro@{update\+Gyro}}
+\index{update\+Gyro@{update\+Gyro}!M\+P\+U6050@{M\+P\+U6050}}
+\subsubsection{\texorpdfstring{update\+Gyro()}{updateGyro()}}
+{\footnotesize\ttfamily void M\+P\+U6050\+::update\+Gyro (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Updates. 
+
+This function updates the values of the Gyrosensor by reading the register his values. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+M\+P\+U6050.\+hpp\item 
+M\+P\+U6050.\+cpp\end{DoxyCompactItemize}
