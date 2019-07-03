@@ -1,6 +1,6 @@
 # IPASS
 
-This repository is created for my final invdividual project in my 1st year of Computer Science at Hogeschool Utrecht.
+This repository is created for my final individual project in my 1st year of Computer Science at Hogeschool Utrecht.
 
 I had to make a library for hardware interfacing and an application which can run the library's code.
 
